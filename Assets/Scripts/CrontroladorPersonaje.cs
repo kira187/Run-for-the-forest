@@ -14,17 +14,51 @@ public class CrontroladorPersonaje : MonoBehaviour
     private Rigidbody2D rbPlayer;
 
     private bool dobleSalto = false;
-    private Animator animator; 
+    private Animator animator;
 
+    private bool corriendo = false;
+    public float velocidad = 8f;
     // Start is called before the first frame update
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody2D>();
     }
 
-  
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (enSuelo || !dobleSalto) // Input.GetKeyDown(KeyCode.Space)
+            {
+                rbPlayer.velocity = (new Vector2(rbPlayer.velocity.x, fuerzaSalto));
+                if (!dobleSalto && !enSuelo)
+                {
+                    dobleSalto = true;
+                }
+            }
+        }
+        else
+        {
+            corriendo = true;
+        }
+    }
+
+
     private void FixedUpdate()
     {
+        if (corriendo)
+        {
+            rbPlayer.velocity = new Vector2(velocidad, rbPlayer.velocity.y);
+        }
+        animator.SetFloat("VelocidadX", rbPlayer.velocity.x);
         enSuelo = Physics2D.OverlapCircle(comprobadorSuelo.position, comprobadorRadio, mascaraSuelo);
         animator.SetBool("IsGrounded", enSuelo);
 
@@ -34,21 +68,5 @@ public class CrontroladorPersonaje : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {    
-        if ((enSuelo || !dobleSalto) && Input.GetKeyDown(KeyCode.Space)) //Input.GetMouseButtonDown(0)
-        {
-            rbPlayer.velocity = (new Vector2(rbPlayer.velocity.x, fuerzaSalto));           
-            if (!dobleSalto && !enSuelo)
-            {
-                dobleSalto = true;
-            }
-        }
-    }
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
 }

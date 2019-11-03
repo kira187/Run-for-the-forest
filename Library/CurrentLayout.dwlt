@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 119
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -461,11 +461,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Misael Aguas Jimenez\Dropbox\my files\2019B\Simulacion
     por computadora\RUN FOR THE FOREST
@@ -473,8 +473,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 900b0000
-    m_LastClickedID: 2960
+    m_SelectedIDs: c2090000
+    m_LastClickedID: 2498
     m_ExpandedIDs: 000000007e090000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000c31000088270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -669,9 +669,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0914121, y: -1.5412424, z: 0.15074757}
+    m_Target: {x: -7.312907, y: -1.6215193, z: 0.109868065}
     speed: 2
-    m_Value: {x: -1.0914121, y: -1.5412424, z: 0.15074757}
+    m_Value: {x: -7.312907, y: -1.6215193, z: 0.109868065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -703,9 +703,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 6.7297716
+    m_Target: 1.3194408
     speed: 2
-    m_Value: 6.7297716
+    m_Value: 1.3194408
   m_Ortho:
     m_Target: 1
     speed: 2
