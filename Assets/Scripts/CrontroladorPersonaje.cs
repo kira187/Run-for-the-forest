@@ -16,7 +16,7 @@ public class CrontroladorPersonaje : MonoBehaviour
     private bool dobleSalto = false;
     private Animator animator;
 
-    private bool corriendo = false;
+    public bool corriendo = false;
     public float velocidad = 8f;
     // Start is called before the first frame update
     void Start()
