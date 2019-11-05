@@ -48,6 +48,7 @@ public class CrontroladorPersonaje : MonoBehaviour
         else
         {
             corriendo = true;
+            //NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeEmpiezaAcorrer");
         }
     }
 

@@ -11,7 +11,13 @@ public class GeneradorBloques : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Generar(); 
+        Generar();    
+    //NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
+}
+
+    void PersonajeEmpiezaAcorrer()
+    {
+        Generar();
     }
 
     // Update is called once per frame

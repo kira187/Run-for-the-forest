@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 871134101737759100}
   - component: {fileID: 7977622942888820982}
   - component: {fileID: 2726420330032259103}
+  - component: {fileID: 3531697175325394483}
   m_Layer: 8
   m_Name: BloqueCorto
   m_TagString: Untagged
@@ -106,3 +107,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 0.6272727}
   m_EdgeRadius: 0
+--- !u!114 &3531697175325394483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082904785537737591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e068c3a000077745bb7bc6a6989c8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
