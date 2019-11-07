@@ -61,12 +61,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AspectUtility.cs" />
+    <Compile Include="Assets\Scripts\BotonJugar.cs" />
     <Compile Include="Assets\Scripts\CrontroladorPersonaje.cs" />
     <Compile Include="Assets\Scripts\Destructor.cs" />
+    <Compile Include="Assets\Scripts\EstadoJuego.cs" />
     <Compile Include="Assets\Scripts\GeneradorBloques.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\NotificationCenter.cs" />
     <Compile Include="Assets\Scripts\Puntuacion.cs" />
+    <Compile Include="Assets\Scripts\Scroll.cs" />
     <Compile Include="Assets\Scripts\SeguirPersonaje.cs" />
     <Compile Include="Assets\Scripts\SumaPuntoBloque.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

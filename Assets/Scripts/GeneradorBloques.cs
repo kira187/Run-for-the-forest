@@ -7,29 +7,32 @@ public class GeneradorBloques : MonoBehaviour
     public GameObject[] obj;
     public float tiempoMin = 1f;
     public float tiempoMax = 2f;
+    private bool fin = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Generar();    
-    //NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
-}
+        Generar();
+        //NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
+        NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
+    }
+
+    void PersonajeHaMuerto()
+    {
+        fin = true;
+    }
 
     void PersonajeEmpiezaAcorrer()
     {
         Generar();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     //Generador de bloques
     void Generar()
     {
-        Instantiate(obj[Random.Range( 0,obj.Length )], transform.position, Quaternion.identity);
-        Invoke("Generar", Random.Range(tiempoMin, tiempoMax));
+        if (!fin)
+        {
+            Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+            Invoke("Generar", Random.Range(tiempoMin, tiempoMax));
+        }
     }
 }

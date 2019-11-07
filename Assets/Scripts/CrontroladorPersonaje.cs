@@ -18,7 +18,7 @@ public class CrontroladorPersonaje : MonoBehaviour
 
     public bool corriendo = false;
     public float velocidad = 8f;
-    // Start is called before the first frame update
+   
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody2D>();
@@ -28,9 +28,7 @@ public class CrontroladorPersonaje : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-
-    // Update is called once per frame
+   
     void Update()
     {
 
@@ -52,7 +50,6 @@ public class CrontroladorPersonaje : MonoBehaviour
         }
     }
 
-
     private void FixedUpdate()
     {
         if (corriendo)
@@ -68,6 +65,4 @@ public class CrontroladorPersonaje : MonoBehaviour
             dobleSalto = false;
         }
     }
-
-
 }

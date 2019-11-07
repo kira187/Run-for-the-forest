@@ -4,24 +4,13 @@ using UnityEngine;
 
 public class Destructor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag ==  "Player")
         {
-            Debug.Break();
-            //VENTANA GAME OVER 
+            NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeHaMuerto");
+            GameObject personaje = GameObject.Find("Personaje");
+            personaje.SetActive(false);
         }
         else
         {
