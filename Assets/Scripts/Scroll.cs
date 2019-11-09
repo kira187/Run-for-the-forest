@@ -5,19 +5,19 @@ using UnityEngine;
 public class Scroll : MonoBehaviour
 {
 
-    public bool IniciarEnMovimiento = false;
+    public bool IniciarEnMovimiento = true;
     public float velocidad = 0f;
     private bool enMovimiento = false;
     private float tiempoInicio = 0f;
 
     void Start()
     {
-        NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaACorrer");
+        NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
-        if (IniciarEnMovimiento)
-        {
-            PersonajeEmpiezaACorrer();
-        }
+        //if (IniciarEnMovimiento)
+        //{
+        //    PersonajeEmpiezaAcorrer();
+        //}
     }
 
     void PersonajeHaMuerto()
@@ -25,7 +25,7 @@ public class Scroll : MonoBehaviour
         enMovimiento = false;
     }
 
-    void PersonajeEmpiezaACorrer()
+    void PersonajeEmpiezaAcorrer()
     {
         enMovimiento = true;
         tiempoInicio = Time.time;
@@ -33,7 +33,7 @@ public class Scroll : MonoBehaviour
     
     void Update()
     {
-        if (enMovimiento)
+        if (enMovimiento || IniciarEnMovimiento)
         {
             GetComponent<Renderer>().material.mainTextureOffset = new Vector2(((Time.time - tiempoInicio) * velocidad) % 1, 0);
         }

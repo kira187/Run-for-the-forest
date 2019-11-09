@@ -10,7 +10,7 @@ public class CrontroladorPersonaje : MonoBehaviour
     private bool enSuelo = true;
     public Transform comprobadorSuelo;
     public LayerMask mascaraSuelo;
-    public float comprobadorRadio = 0.07f;
+    private float comprobadorRadio = 0.07f;
     private Rigidbody2D rbPlayer;
 
     private bool dobleSalto = false;

@@ -20,7 +20,7 @@ public class GeneradorBloques : MonoBehaviour
         fin = true;
     }
 
-    void PersonajeEmpiezaAcorrer(Notification notification)
+    void PersonajeEmpiezaAcorrer()
     {
         Generar();
     }
