@@ -11,8 +11,7 @@ public class GeneradorBloques : MonoBehaviour
 
     void Start()
     {
-        Generar();
-        //NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
+        NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
     }
 
@@ -21,7 +20,7 @@ public class GeneradorBloques : MonoBehaviour
         fin = true;
     }
 
-    void PersonajeEmpiezaAcorrer()
+    void PersonajeEmpiezaAcorrer(Notification notification)
     {
         Generar();
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BotonJugar : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class BotonJugar : MonoBehaviour
 
     void OnMouseDown()
     {
-        Application.LoadLevel(nombreEscenaParaCargar);
+        SceneManager.LoadScene(nombreEscenaParaCargar);
         //Camera.main.GetComponent<AudioSource>().Stop();
         //GetComponent<AudioSource>().Play();
         //Invoke("CargarNivelJuego", GetComponent<AudioSource>().clip.length);
@@ -18,7 +19,7 @@ public class BotonJugar : MonoBehaviour
 
     void CargarNivelJuego()
     {
-        Application.LoadLevel(nombreEscenaParaCargar);
+        SceneManager.LoadScene(nombreEscenaParaCargar);
         //SceneManager.loadScene();
     }
 }
