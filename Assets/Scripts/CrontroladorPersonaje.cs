@@ -36,19 +36,22 @@ public class CrontroladorPersonaje : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (enSuelo || !dobleSalto) // Input.GetKeyDown(KeyCode.Space)
+            if (corriendo)
             {
-                rbPlayer.velocity = (new Vector2(rbPlayer.velocity.x, fuerzaSalto));
-                if (!dobleSalto && !enSuelo)
+                if (enSuelo || !dobleSalto) // Input.GetKeyDown(KeyCode.Space)
                 {
-                    dobleSalto = true;
+                    GetComponent<Rigidbody2D>().velocity = (new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto));
+                    if (!dobleSalto && !enSuelo)
+                    {
+                        dobleSalto = true;
+                    }
                 }
+            }                    
+            else
+            {
+                corriendo = true;
+                NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeEmpiezaAcorrer");
             }
-        }
-        else
-        {
-            corriendo = true;
-            //NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeEmpiezaAcorrer");
         }
     }
 
