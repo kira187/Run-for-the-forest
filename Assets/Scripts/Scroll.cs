@@ -14,10 +14,10 @@ public class Scroll : MonoBehaviour
     {
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaAcorrer");
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
-        //if (IniciarEnMovimiento)
-        //{
-        //    PersonajeEmpiezaAcorrer();
-        //}
+        if (IniciarEnMovimiento)
+        {
+            PersonajeEmpiezaAcorrer();
+        }
     }
 
     void PersonajeHaMuerto()

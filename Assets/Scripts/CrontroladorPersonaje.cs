@@ -48,7 +48,7 @@ public class CrontroladorPersonaje : MonoBehaviour
             {
                 if (enSuelo || !dobleSalto)
                 {
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto);
+                    rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fuerzaSalto);
 
                     if (!dobleSalto && !enSuelo)
                     {
